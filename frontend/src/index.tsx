@@ -7,10 +7,7 @@ import { ContextProvider } from "./context";
 import App from "./App";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import {
-  Experimental_CssVarsProvider as CssVarsProvider,
-  useColorScheme,
-} from "@mui/material/styles";
+import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
 
 const root = ReactDOM.createRoot(
   document.getElementById("retrobg") as HTMLElement
