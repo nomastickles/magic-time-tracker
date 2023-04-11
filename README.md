@@ -26,7 +26,7 @@ pip install --upgrade Flask
 
 ### ./backend/.env
 
-APP_SECRET = simple not very secure way to gate all flask APIsgit
+APP_SECRET = simple not very secure way to gate all flask routes
 
 example of resulting url:
 http://192.168.50.123:8765/?key=coolhat
