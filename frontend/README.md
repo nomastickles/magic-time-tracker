@@ -9,7 +9,9 @@ Flask frontend is already built and saved within "./backend/static". However if 
 1.  clone this repo in your remote device (rpi)
 2.  clone to your local frontend dev machine
 3.  from local dev `yarn start` and do some dev'ing
-4.  once you are happy use `build:copy-files-to-flask` (example:)
+4.  once you are happy use `build:copy-files-to-flask`
+
+example:
 
 ```sh
 MAGIC_USER=pi MAGIC_HOST=192.168.1.123 yarn build:copy-files-to-flask
