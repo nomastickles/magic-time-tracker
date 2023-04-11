@@ -1,5 +1,6 @@
 {
   "name": "magic-time-tracker-ui",
+  "homepage": "https://nomastickles.github.io/magic-time-tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "test": "react-scripts test",
     "build:copy-files-to-flask": "yarn build && ./copy_files_to_flask.sh $MAGIC_USER $MAGIC_HOST",
     "start:demo": "REACT_APP_IS_DEMO=1 && yarn start",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build -u 'github-actions-bot <support+actions@github.com>'"
   },
   "eslintConfig": {
