@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/magic-time-tracker/static/css/main.f91f4af2.css",
+    "main.js": "/magic-time-tracker/static/js/main.49875f7a.js",
+    "static/js/27.6f68fdfa.chunk.js": "/magic-time-tracker/static/js/27.6f68fdfa.chunk.js",
+    "static/media/digital-7.ttf": "/magic-time-tracker/static/media/digital-7.ae951a188b593952b384.ttf",
+    "index.html": "/magic-time-tracker/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.f91f4af2.css",
+    "static/js/main.49875f7a.js"
+  ]
+}
