@@ -19,7 +19,9 @@ pip install python-dotenv marshmallow
 pip install --upgrade numpy
 pip install --upgrade Flask
 
-# 3. create ./backend/.env
+# 3. fill out ./backend/.env file
+cp ./backend/.env-sample ./backend/.env
+
 # 4. chmod a+x ./start.sh && ./start.sh
 
 ```
