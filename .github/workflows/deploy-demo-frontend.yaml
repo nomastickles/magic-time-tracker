@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy
+    name:  Deploy Demo Frontend
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -22,7 +22,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: test and deploy
+    - name: deploy
       run: |
         yarn install
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY

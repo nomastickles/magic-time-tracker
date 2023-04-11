@@ -1,5 +1,7 @@
 ![](media/demo_ui.gif)
 
+DEMO: [https://nomastickles.github.io/magic-time-tracker/](https://nomastickles.github.io/magic-time-tracker/)
+
 ### What does this do
 
 This thing tracks time (eating and sleeping) using a python + react app intended for a raspberry pi on your local network. It's not perfect but it's fun.
@@ -24,7 +26,7 @@ pip install --upgrade Flask
 
 ### ./backend/.env
 
-APP_SECRET = simple not very secure way to gate all flask APIs
+APP_SECRET = simple not very secure way to gate all flask APIsgit
 
 example of resulting url:
 http://192.168.50.123:8765/?key=coolhat
