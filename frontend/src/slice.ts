@@ -2,15 +2,24 @@ import { createSlice } from "@reduxjs/toolkit";
 import * as actions from "./actions";
 import { AppState } from "./types";
 
+const isInitSleep = () => {
+  if (!window.APP_DATA_INIT?.TIMESTAMP_SLEEP) {
+    return false;
+  }
+
+  if (!window.APP_DATA_INIT?.TIMESTAMP_WAKE) {
+    return true;
+  }
+
+  return (
+    window.APP_DATA_INIT.TIMESTAMP_SLEEP > window.APP_DATA_INIT.TIMESTAMP_WAKE
+  );
+};
+
 export const initialState: AppState = {
   appData: window.APP_DATA_INIT || {},
   appStep: {
-    SLEEP:
-      window.APP_DATA_INIT?.TIMESTAMP_SLEEP &&
-      window.APP_DATA_INIT?.TIMESTAMP_WAKE &&
-      window.APP_DATA_INIT.TIMESTAMP_SLEEP > window.APP_DATA_INIT.TIMESTAMP_WAKE
-        ? 1
-        : 0,
+    SLEEP: isInitSleep() ? 1 : 0,
   },
 };
 
