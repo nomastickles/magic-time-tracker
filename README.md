@@ -22,7 +22,7 @@ pip install --upgrade Flask
 # 3. fill out ./backend/.env file
 cp ./backend/.env-sample ./backend/.env
 
-# 4. chmod a+x ./start.sh && ./start.sh
+$. chmod a+x ./start.sh && ./start.sh
 
 ```
 
