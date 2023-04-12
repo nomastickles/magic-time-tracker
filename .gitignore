@@ -1,1 +1,4 @@
 ./blink1-tool
+/data/*
+!data/.gitkeep
+output.csv

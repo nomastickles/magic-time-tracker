@@ -38,7 +38,7 @@ http://192.168.50.123:8765/?key=coolhat
 Make a csv of activity via:
 
 ```sh
-ls -rt1 ./python/data | grep @ > output.csv && sed -i 's/@/,/g; s/\_/,/g' output.csv && cat output.csv
+ls -rt1 ./data | grep @ > output.csv && sed -i 's/@/,/g; s/\_/,/g' output.csv && cat output.csv
 ```
 
 ## blink1_poll_flag_help.sh
