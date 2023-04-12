@@ -8,16 +8,16 @@
 
 if [[ $# != 1 ]]; then
   echo "need one argument"
-  echo "example: ./blink1_poll_flag_help.sh 1234567890"
+  echo "example: ./blink1_poll_flag_help.sh http://192.168.1.123:8888/current?key=1234567890"
   exit 1
 fi
 
-KEY=$1
+HOST=$1
 
 while [ true ]; do
   ./blink1-tool --off
   sleep 1
-  RESULT=$(curl "http://192.168.1.123:8888/current?key=$KEY" | jq '.FLAG_HELP')
+  RESULT=$(curl "$HOST" | jq '.FLAG_HELP')
   echo $RESULT
   if [[ $RESULT -eq 1 ]]; then
     ./blink1-tool --magenta
