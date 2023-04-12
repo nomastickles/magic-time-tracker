@@ -1,6 +1,5 @@
 {
   "name": "magic-time-tracker-ui",
-  "homepage": "https://nomastickles.github.io/magic-time-tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
