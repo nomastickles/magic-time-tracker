@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This looks for the flag_help flag in the current state of the backend
+# This looks for the FLAG_HELP file in the current state of the backend
 # and should be run on a separate machine.
 #
 # Using thingm's blink(1) mk3 USB RGB LED.
@@ -15,13 +15,14 @@ fi
 HOST=$1
 
 while [ true ]; do
-  ./blink1-tool --off
-  sleep 1
   RESULT=$(curl "$HOST" | jq '.FLAG_HELP')
-  echo $RESULT
   if [[ $RESULT -eq 1 ]]; then
+    echo "FLAG_HELP 🛟"
     ./blink1-tool --magenta
+    sleep 10
+  else
+    ./blink1-tool --off
+    sleep 5
   fi
 
-  sleep 5
 done

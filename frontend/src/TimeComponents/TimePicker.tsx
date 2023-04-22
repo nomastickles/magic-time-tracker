@@ -27,7 +27,15 @@ export default function TimePicker({
           if (!dJs) {
             return;
           }
-          onAccept(dJs?.unix() * 1000);
+          let results = dJs.unix() * 1000;
+          const twentyFourHours = 1000 * 60 * 60 * 24;
+          const now = Date.now();
+          if (results > now) {
+            // edge case
+            results -= twentyFourHours;
+          }
+
+          onAccept(results);
         }}
       />
     </Box>

@@ -28,10 +28,9 @@ export default function ModalTimePicker({
   dataName: AppDataName;
 }) {
   const dispatch = useAppDispatch();
-  const { appStep, appData } = useAppState();
+  const { appStep } = useAppState();
   const updateDataToServer = useUpdateDataToServer();
   const open = !!appStep[modalStepName];
-  const timestamp = appData[dataName];
 
   const handleClose = () =>
     dispatch(actions.setAppStep({ name: modalStepName, clear: true }));
@@ -46,7 +45,6 @@ export default function ModalTimePicker({
       >
         <Box sx={style}>
           <TimePicker
-            defaultTimestamp={timestamp}
             onClose={() => {
               handleClose();
             }}
