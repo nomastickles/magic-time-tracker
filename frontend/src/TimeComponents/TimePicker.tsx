@@ -1,6 +1,5 @@
 import Box from "@mui/material/Box";
 import { StaticTimePicker } from "@mui/x-date-pickers/StaticTimePicker";
-import dayjs from "dayjs";
 
 export default function TimePicker({
   onClose = () => {},
@@ -16,26 +15,28 @@ export default function TimePicker({
             // height: "100px",
           }
         }
-        defaultValue={dayjs(defaultTimestamp)}
         slotProps={{
           actionBar: {
             actions: ["cancel", "today", "accept"],
           },
         }}
         onClose={onClose}
-        onAccept={(dJs) => {
-          if (!dJs) {
+        onAccept={(results) => {
+          if (!results) {
             return;
           }
-          let results = dJs.unix() * 1000;
           const twentyFourHours = 1000 * 60 * 60 * 24;
           const now = Date.now();
-          if (results > now) {
+          const temp = results as any;
+          const date = new Date(temp["$d"]);
+          let incomingTimestamp = date.getTime();
+
+          if (incomingTimestamp > now) {
             // edge case
-            results -= twentyFourHours;
+            incomingTimestamp -= twentyFourHours;
           }
 
-          onAccept(results);
+          onAccept(incomingTimestamp);
         }}
       />
     </Box>
