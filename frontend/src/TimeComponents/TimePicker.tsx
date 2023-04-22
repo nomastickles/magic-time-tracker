@@ -27,8 +27,7 @@ export default function TimePicker({
           }
           const twentyFourHours = 1000 * 60 * 60 * 24;
           const now = Date.now();
-          const temp = results as any;
-          const date = new Date(temp["$d"]);
+          const date = new Date((results as any)["$d"]);
           let incomingTimestamp = date.getTime();
 
           if (incomingTimestamp > now) {
