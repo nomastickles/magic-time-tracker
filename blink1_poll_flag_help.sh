@@ -14,7 +14,7 @@ fi
 
 HOST=$1
 
-while [ true ]; do
+while true; do
   RESULT=$(curl "$HOST" | jq '.FLAG_HELP')
   if [[ $RESULT -eq 1 ]]; then
     echo "FLAG_HELP 🛟"
